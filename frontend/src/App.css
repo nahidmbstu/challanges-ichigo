@@ -1,0 +1,62 @@
+/* using css grid template areas */
+/* mobile first design */
+.section-one {
+ display: grid;
+ gap: 5px;
+ grid-template-areas:
+ "one one"
+ "three four"
+ "two  two";
+}
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+  
+}.four {
+  grid-area: four;
+}
+
+.section-two {
+  display: grid;
+  gap: 5px;
+  grid-template-areas:
+  "seven seven"
+  "five eight"
+  "six nine";
+ }
+
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+/* for bigger screen */
+@media (min-width: 600px) {
+  .section-one {
+    grid-template-areas:
+    "one two two"
+    "one three four"
+    ;
+  }
+  .section-two {
+    grid-template-areas:
+    "five seven eight"
+    "six seven nine";
+  }
+
+}
